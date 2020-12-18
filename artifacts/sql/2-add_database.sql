@@ -1,4 +1,5 @@
 create database test;
+USE test;
 CREATE TABLE tutorials_tbl(
   tutorial_id INT NOT NULL AUTO_INCREMENT,
   tutorial_title VARCHAR(100) NOT NULL,
