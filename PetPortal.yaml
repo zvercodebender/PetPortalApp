@@ -15,7 +15,7 @@ spec:
 apiVersion: xl-deploy/v1
 kind: Applications
 spec:
-- name: Applications/PetPortalApps/PetPortal/%version%
+- name: !format Applications/PetPortalApps/PetPortal/%version%
   type: udm.DeploymentPackage
   orchestrator:
   - sequential-by-deployment-group
