@@ -20,11 +20,11 @@ cd ../..
 if [ ! -z "${GET_LOCAL}" ]
 then
   GITHUB_RUN_NUMBER="0"
-  xl apply --file PetPortal.yaml --values version=${VERSION}-${GITHUB_RUN_NUMBER}
+  xl apply --file PetPortal.yaml --values version=${GITHUB_RUN_NUMBER}.0
 else
   curl -LO https://dist.xebialabs.com/public/xl-cli/$CLI_VERSION/linux-amd64/xl
   chmod +x xl
-  ./xl apply --xl-deploy-url=$XLD_URL --xl-deploy-username=$XLD_USER --xl-deploy-password=$XLD_PASSWD --file PetPortal.yaml --values version=${VERSION}-${GITHUB_RUN_NUMBER}
+  ./xl apply --xl-deploy-url=$XLD_URL --xl-deploy-username=$XLD_USER --xl-deploy-password=$XLD_PASSWD --file PetPortal.yaml --values version=${GITHUB_RUN_NUMBER}.0
 fi
 rm artifacts/PetPortal_pages.zip
 rm artifacts/sql.zip
