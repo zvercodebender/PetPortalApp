@@ -1,5 +1,7 @@
 name: Build-PetPortalApp
 on:
+  workflow_dispatch:
+  
   push:
     tags:
       - '*'
