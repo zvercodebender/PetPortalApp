@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 export CLI_VERSION="9.7.0"
-export VERSION="1.0"
+export VERSION="2.0"
 echo "Version = ${VERSION}"
 
 cd artifacts/sql
