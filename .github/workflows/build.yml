@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: oprypin/find-latest-tag@v1
         with:
-          repository: zvercodebender/PetPortalApp  # The repository to scan.
+          repository: zvercodebender/PetPortal  # The repository to scan.
           releases-only: false  # We know that all relevant tags have a GitHub release for them.
         id: tagkit  # The step ID to refer to later.
 
