@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 export CLI_VERSION="9.7.0"
-export VERSION="2.0"
+export VERSION="3.1"
 echo "Version = ${VERSION}"
 
 cd artifacts/sql
@@ -9,6 +9,12 @@ zip -r ../sql.zip ./*
 
 cd ../webContent
 zip -r ../PetPortal_pages.zip ./*
+
+cd ../petclinic-war
+zip -r ../petclinic-ear/petclinic.war ./*
+
+cd ../petclinic-ear
+zip -r ../PetClinic.ear ./*
 
 cd ../..
 if [ ! -z "${GET_LOCAL}" ]
