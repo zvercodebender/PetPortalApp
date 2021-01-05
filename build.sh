@@ -28,6 +28,7 @@ else
 fi
 rm artifacts/PetPortal_pages.zip
 rm artifacts/sql.zip
+rm artifacts/PetClinic.ear
 if [ -z "${GET_LOCAL}" ]
 then
   rm xl
