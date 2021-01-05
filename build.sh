@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 export CLI_VERSION="9.7.0"
-export VERSION="1.0.0-master"
+export VERSION="1.0"
 echo "Version = ${VERSION}"
 
 cd artifacts/sql
@@ -9,6 +9,12 @@ zip -r ../sql.zip ./*
 
 cd ../webContent
 zip -r ../PetPortal_pages.zip ./*
+
+cd ../petclinic-war
+zip -r ../petclinic-ear/petclinic.war ./*
+
+cd ../petclinic-ear
+zip -r ../PetClinic.ear ./*
 
 cd ../..
 if [ ! -z "${GET_LOCAL}" ]
@@ -22,6 +28,8 @@ else
 fi
 rm artifacts/PetPortal_pages.zip
 rm artifacts/sql.zip
+rm artifacts/PetClinic.ear
+rm artifacts/petclinic-ear/petclinic.war
 if [ -z "${GET_LOCAL}" ]
 then
   rm xl
